@@ -1,0 +1,68 @@
+##Task1-->for creating directory structure
+
+##Solution-->
+mkdir -p A/{B/{D/{I/{M/{Z}},J/{L/{Z}}},E/{H/{L/{Z}}}},C/{F/{H/{L/{Z}}},G/{K/{L/{Z}}}}}
+
+##Task2-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+##Task3--> two user and copying there data without using root
+
+##Solution-->
+
+##Create users
+
+	useradd -m A
+	passwd A
+
+	useradd -m B
+	passwd B
+
+
+## Creating directories and files inside users
+
+	##user A
+	mkdir dir1
+	touch file1
+
+	##user B
+	mkdir dir2
+	touch file2
+
+##changing permissions of users
+
+	## user A
+	chmod 777 .
+
+	## user B
+	chmod 777 .
+
+##copying directory and file to each other
+
+	##user A to user B
+	cp /home/A/file1 /home/B
+	cp /home/A/dir1 /home/B
+
+	##user B to user A
+	cp /home/B/file2 /home/A
+	cp /home/B/dir2 /home/A
+  
+  
+  
+  ##Task2-->create an user which will execute only date command
+##Solution
+chmod -x /usr/bin/date
+useradd -s /usr/bin/date dip
+setfacl -m u:dip:rwx /usr/bin/date
+su - dip
