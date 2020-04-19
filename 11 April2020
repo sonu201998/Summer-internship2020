@@ -51,10 +51,3 @@ su - sonu
 	cp /home/B/dir2 /home/A
   
   
-  
-  ##Task2-->create an user which will execute only date command
-##Solution
-chmod -x /usr/bin/date
-useradd -s /usr/bin/date dip
-setfacl -m u:dip:rwx /usr/bin/date
-su - dip
