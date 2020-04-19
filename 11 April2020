@@ -9,6 +9,8 @@ chmod -x /usr/bin/date
 useradd -s /usr/bin/date sonu
 setfacl -m u:sonu:rwx /usr/bin/date
 su - sonu
+
+
 ##Task3--> two user and copying there data without using root
 
 ##Solution-->
